@@ -58,3 +58,7 @@ logs/
 /.claude/settings.local.json
 /docs/docker/milvus/volumes/
 /.codex-runtime/
+
+# local dev secrets
+.dev/.env
+.dev/application-local.yml
