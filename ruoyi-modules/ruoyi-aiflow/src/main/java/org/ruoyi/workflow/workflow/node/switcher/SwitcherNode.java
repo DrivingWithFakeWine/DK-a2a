@@ -295,7 +295,10 @@ public class SwitcherNode extends AbstractWfNode {
             }
 
             // 根据UUID查询对应节点是否存在Param(替换成Input)
-            result = findParamValueInNode(nodeUuid, paramName, inputs, result);
+            if (result == null) {
+                result = findParamValueInNode(nodeUuid, paramName, inputs, result);
+            }
+
 
             if (result != null) {
                 log.info("在节点 '{}' 的输出中找到参数 '{}': '{}'", nodeUuid, paramName, result);
